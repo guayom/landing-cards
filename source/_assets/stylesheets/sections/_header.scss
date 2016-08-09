@@ -2,5 +2,12 @@ header{
   @include linear-gradient($azul-oscuro, darken($azul-oscuro, 10%));
   .header-content{
     @include outer-container;
+    @include padding(40px 0)
+  }
+  h1{
+    color: $blanco;
+  }
+  h2{
+    color: $blanco;
   }
 }
