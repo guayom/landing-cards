@@ -1,0 +1,6 @@
+header{
+  @include linear-gradient($azul-oscuro, darken($azul-oscuro, 10%));
+  .header-content{
+    @include outer-container;
+  }
+}
