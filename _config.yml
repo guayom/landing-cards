@@ -11,11 +11,11 @@ assets:
   cachebust: soft
 
 # Site settings
-title: Jekyll Starter
-description: Prototyping starter kit for Jekyll
+title: Encuentre la tarjeta perfecta
+description: Entre tantas tarjetas ¿Cuál es la que mejor se adapta a sus necesidades?
 
 # Name of project on Github
-baseurl: /proteus-jekyll
+baseurl: 
 
 # Build settings
 markdown: kramdown
