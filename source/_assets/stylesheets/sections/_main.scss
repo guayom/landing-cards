@@ -1,0 +1,9 @@
+.main-content{
+  @include outer-container;
+  }
+.card-box{
+  background: $blanco;
+  display: block;
+  @include margin(null null $main-spacing null);
+  @include padding($main-spacing);
+}

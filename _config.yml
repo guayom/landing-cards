@@ -15,7 +15,7 @@ title: Encuentre la tarjeta perfecta
 description: Entre tantas tarjetas ¿Cuál es la que mejor se adapta a sus necesidades?
 
 # Name of project on Github
-baseurl: 
+baseurl:
 
 # Build settings
 markdown: kramdown
