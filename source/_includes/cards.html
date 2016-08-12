@@ -1,6 +1,11 @@
 {% for tarjeta in tarjetas %}
   <div class="card-box">
-    <img src="http://placehold.it/350x150">
-    {{ tarjeta.nombre }}
+    <h2>{{ tarjeta.nombre }}</h2>
+    <div class="card-art">
+      <img src="http://placehold.it/350x150">
+    </div>
+    <div class="card-content">
+      <p>text</p>
+    </div>
   </div>
 {% endfor %}
