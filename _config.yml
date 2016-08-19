@@ -19,3 +19,9 @@ baseurl:
 
 # Build settings
 markdown: kramdown
+
+contentful:
+  spaces:
+    - tarjetas:
+        space: 9cds0lha1plv
+        access_token: 9f6c8ccc9a4c169661818d45d3869b9644caf0261e1dbd482632f3e44ac93b36

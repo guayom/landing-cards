@@ -1,11 +1,28 @@
-{% for tarjeta in tarjetas %}
-  <div class="card-box">
-    <h2>{{ tarjeta.nombre }}</h2>
-    <div class="card-art">
-      <img src="http://placehold.it/350x150">
+<div class="card-containter">
+  {% for tarjeta in tarjetas %}
+    {% for categoria in categoriasContentful %}
+      {% if categoria.sys.id == tarjeta.categoria.sys.id %}
+        {% capture categoriaTitulo %}{{ categoria.titulo }}{% endcapture %}
+        {% capture categoriaId %}{{ categoria.identificador }}{% endcapture %}
+        {% capture color %}{{ categoria.identificador }}{% endcapture %}
+      {% endif %}
+    {% endfor %}
+    <div class="card-box {{ categoriaId }}">
+      <h2>{{ tarjeta.nombre }}</h2>
+      <div class="card-art">
+        <img src="http://placehold.it/350x150">
+        <a href="{{tarjeta.form}}" class="button" />Solicitar</a>
+      </div>
+      <div class="card-description">
+        <h3>Descripción de la tarjeta</h3>
+        <p>{{tarjeta.breveDescripcion}}</p>
+        <h4>Categoría</h4>
+        {{ categoriaTitulo }}
+      </div>
+      <div class="card-benefits">
+        <h3>Beneficios</h3>
+        <p>{{tarjeta.beneficiosGenerales}}</p>
+      </div>
     </div>
-    <div class="card-content">
-      <p>text</p>
-    </div>
-  </div>
-{% endfor %}
+  {% endfor %}
+</div>

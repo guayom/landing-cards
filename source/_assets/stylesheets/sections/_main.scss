@@ -2,8 +2,18 @@
   @include outer-container;
   }
 .card-box{
-  background: $blanco;
-  display: block;
   @include margin(null null $main-spacing null);
   @include padding($main-spacing);
+  @include row();
+  background: $blanco;
+  box-shadow: $gris-oscuro 2px 2px 10px;
+}
+.card-art{
+  @include span-columns(3);
+}
+.card-description{
+  @include span-columns(5);
+}
+.card-benefits{
+  @include span-columns(3);
 }

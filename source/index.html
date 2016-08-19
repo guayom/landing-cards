@@ -2,4 +2,8 @@
 layout: default
 ---
 {% assign tarjetas = site.data.contentful.spaces.tarjetas.tarjetas %}
+{% assign categoriasContentful = site.data.contentful.spaces.tarjetas.categoria %}
+<br/>
+{% include filters.html %}
+<br/>
 {% include cards.html %}
