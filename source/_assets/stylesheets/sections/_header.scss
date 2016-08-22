@@ -1,6 +1,6 @@
-header{
+header.hero{
   @include linear-gradient($azul-oscuro, darken($azul-oscuro, 10%));
-  @include margin(null null $main-spacing null);
+  //@include margin(null null $main-spacing null);
   .header-content{
     @include outer-container;
     @include padding(40px 0)

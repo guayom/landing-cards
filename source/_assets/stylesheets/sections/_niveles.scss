@@ -1,32 +1,39 @@
 ul.niveles{
-  margin-bottom: 5px;
   li{
     display: inline-block;
     margin-right: 5px;
     padding: 2px 5px;
-    color: #fff;
     border-radius: 5px;
 
-    &.dorada{
+    &:before{
+      content: 	"";
+      height: 0.8em;
+      width: 0.8em;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 3px;
+    }
+
+    &.dorada:before{
       background-color: $dorada;
     }
-    &.black{
+    &.black:before{
       background-color: $black;
     }
-    &.platino{
+    &.platino:before{
       background-color: $platino;
       color: #333;
     }
-    &.clasica{
+    &.clasica:before{
       background-color: $clasica;
     }
-    &.premium{
+    &.premium:before{
       background-color: $premium;
     }
-    &.elite{
+    &.elite:before{
       background-color: $elite;
     }
-    &.infinite{
+    &.infinite:before{
       background-color: $infinite;
     }
   }

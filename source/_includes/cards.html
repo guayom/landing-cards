@@ -1,5 +1,5 @@
-<div class="card-containter">
-  {% for tarjeta in tarjetas %}
+<div class="cards-containter">
+  {% for tarjeta in site.data.contentful.spaces.tarjetas.tarjetas %}
     {% for categoria in categoriasContentful %}
       {% if categoria.sys.id == tarjeta.categoria.sys.id %}
         {% capture categoriaTitulo %}{{ categoria.titulo }}{% endcapture %}
@@ -10,13 +10,14 @@
     <div class="card-box {{ categoriaId }}">
       <h2>{{ tarjeta.nombre }}</h2>
       <div class="card-art">
-        <img src="{{tarjeta.imagenes.imagen.url}}?w=300">
-        <a href="{{tarjeta.form}}" class="button" />Solicitar</a>
+        <img src="{{tarjeta.imagenes.imagen.url}}?w=200">
       </div>
       <div class="card-description">
         <h3>Descripción de la tarjeta</h3>
         <p>{{tarjeta.breveDescripcion | markdownify }}</p>
         <dl class="dl-horizontal">
+          <dt>Cargo Administrativo: </dt><dd>{{tarjeta.cargoAdministrativo}}</dd>
+
           <dt>Niveles</dt>
           <dd>
             <ul class="niveles">
@@ -27,6 +28,7 @@
           </dd>
           <dt>Categoría</dt>
           <dd>{{ tarjeta.categoria.titulo }}</dd>
+
         </dl>
       </div>
       <div class="card-benefits">
@@ -36,6 +38,12 @@
             <li>{{beneficio.titulo}}</li>
           {% endfor %}
         </ul>
+        {% if tarjeta.disclaimers != blank %}
+          <p class="disclaimer">{{tarjeta.disclaimers}}</p>
+        {% endif %}
+      </div>
+      <div class="card-options">
+        <a href="{{tarjeta.form}}" class="button" />Solicitar</a>
       </div>
     </div>
   {% endfor %}

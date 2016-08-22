@@ -23,6 +23,7 @@ $blue: #477dca;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$lighter-gray: #f0f0f0;
 
 //Colores de tarjetas
 $dorada: #b29600;
@@ -39,7 +40,7 @@ $dorado: #9A877A;
 $azul-oscuro: #394457;
 $azul-medio: #49566A;
 $gris-oscuro: #6D6E71;
-$gris-medio: #A6A5AA;
+$gris-medio: #ccc;
 $gris-claro: #F1F1F1;
 $blanco: #ffffff;
 
@@ -56,3 +57,6 @@ $base-border: 1px solid $base-border-color;
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Element Colors
+$main-background-color: $blanco;
