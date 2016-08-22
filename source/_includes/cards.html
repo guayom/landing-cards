@@ -10,18 +10,32 @@
     <div class="card-box {{ categoriaId }}">
       <h2>{{ tarjeta.nombre }}</h2>
       <div class="card-art">
-        <img src="http://placehold.it/350x150">
+        <img src="{{tarjeta.imagenes.imagen.url}}?w=300">
         <a href="{{tarjeta.form}}" class="button" />Solicitar</a>
       </div>
       <div class="card-description">
         <h3>Descripción de la tarjeta</h3>
-        <p>{{tarjeta.breveDescripcion}}</p>
-        <h4>Categoría</h4>
-        {{ categoriaTitulo }}
+        <p>{{tarjeta.breveDescripcion | markdownify }}</p>
+        <dl class="dl-horizontal">
+          <dt>Niveles</dt>
+          <dd>
+            <ul class="niveles">
+              {% for nivel in tarjeta.nivel %}
+                <li class="{{nivel.identificador}}">{{nivel.titulo}}</li>
+              {% endfor %}
+            </ul>
+          </dd>
+          <dt>Categoría</dt>
+          <dd>{{ tarjeta.categoria.titulo }}</dd>
+        </dl>
       </div>
       <div class="card-benefits">
         <h3>Beneficios</h3>
-        <p>{{tarjeta.beneficiosGenerales}}</p>
+        <ul>
+          {% for beneficio in tarjeta.beneficios limit:4 %}
+            <li>{{beneficio.titulo}}</li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   {% endfor %}

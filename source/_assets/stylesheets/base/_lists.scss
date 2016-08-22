@@ -29,3 +29,17 @@ dl {
     margin: 0;
   }
 }
+.dl-horizontal{
+  dt{
+    display: inline;
+    clear: left;
+  }
+  dd{
+    display: inline;
+    clear: right;
+    @include clearfix;
+    ul{
+      display: inline-block;
+    }
+  }
+}

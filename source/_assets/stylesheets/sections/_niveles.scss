@@ -1,0 +1,33 @@
+ul.niveles{
+  margin-bottom: 5px;
+  li{
+    display: inline-block;
+    margin-right: 5px;
+    padding: 2px 5px;
+    color: #fff;
+    border-radius: 5px;
+
+    &.dorada{
+      background-color: $dorada;
+    }
+    &.black{
+      background-color: $black;
+    }
+    &.platino{
+      background-color: $platino;
+      color: #333;
+    }
+    &.clasica{
+      background-color: $clasica;
+    }
+    &.premium{
+      background-color: $premium;
+    }
+    &.elite{
+      background-color: $elite;
+    }
+    &.infinite{
+      background-color: $infinite;
+    }
+  }
+}
