@@ -1,3 +1,4 @@
+{% assign cantidadDeBeneficios = 4 %}
 <div id="cards-container" class="cards-containter">
   {% for tarjeta in site.data.contentful.spaces.tarjetas.tarjetas %}
     <div class="card-box mix {{ tarjeta.categoria.slug }}">
@@ -8,52 +9,23 @@
       <div class="card-description">
         <h3>En breve</h3>
         <p>{{tarjeta.breveDescripcion | markdownify }}</p>
-        <dl class="dl-horizontal">
-          <dt>Cargo Administrativo: </dt><dd>{{tarjeta.cargoAdministrativo}}</dd>
-          <dt>Disponible en: </dt>
-          <dd>
-          {% for marca in tarjeta.marcas %}
-            <!-- cambiar por logos -->
-            {{marca.titulo}}
-          {% endfor %}
-          </dd>
-<!--
-          <dt>Niveles</dt>
-          <dd>
-            <ul class="niveles">
-              {% for nivel in tarjeta.nivel %}
-                <li class="{{nivel.identificador}}">{{nivel.titulo}}</li>
-              {% endfor %}
-            </ul>
-          </dd>
-          <dt>Categoría</dt>
-          <dd>{{ tarjeta.categoria.titulo }}</dd>
--->
-        </dl>
       </div>
       <div class="card-benefits">
         <h3>Beneficios</h3>
         <ul>
-          {% for beneficio in tarjeta.beneficios limit:4 %}
+          {% for beneficio in tarjeta.beneficios limit:cantidadDeBeneficios %}
             <li>{{beneficio.titulo}}</li>
           {% endfor %}
         </ul>
         {% if tarjeta.disclaimers != blank %}
           <p class="disclaimer">{{tarjeta.disclaimers}}</p>
         {% endif %}
-        <a href="javascript:void(0)" class="requisitos-button">Ver requisitos</a>
-        <div class="requisitos-container">
-          <ul>
-            {% for requisito in tarjeta.requisitos %}
-              <li>{{requisito}}</li>
-            {% endfor %}
-          </ul>
-        </div>
       </div>
       <div class="card-options">
         <a href="{{tarjeta.form}}" class="button" />Solicitar</a>
         <a href="{{tarjeta.info_link}}" class="mas-info">Más información</a>
       </div>
+      {% include mas-info.html %}
     </div>
   {% endfor %}
 </div>

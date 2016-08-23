@@ -1,0 +1,46 @@
+<div class="mas-info-container">
+  <div class="mas-info-general">
+    <dl>
+      <dt>Requisitos</dt>
+      <dd>
+        <ul>
+          {% for requisito in tarjeta.requisitos %}
+            <li>{{requisito}}</li>
+          {% endfor %}
+        </ul>
+      </dd>
+      <dt>Cargo Administrativo: </dt><dd>{{tarjeta.cargoAdministrativo}}</dd>
+      <dt>Modalidad de acumulación</dt>
+      <dd>{{tarjeta.modalidadDeAcumulacion}}</dd>
+      <dt>Disponible en: </dt>
+      <dd>
+      {% for marca in tarjeta.marcas %}
+        <!-- cambiar por logos -->
+        {{marca.titulo}}
+      {% endfor %}
+      </dd>
+      <!--
+      <dt>Niveles</dt>
+      <dd>
+        <ul class="niveles">
+          {% for nivel in tarjeta.nivel %}
+            <li class="{{nivel.identificador}}">{{nivel.titulo}}</li>
+          {% endfor %}
+        </ul>
+      </dd>
+      <dt>Categoría</dt>
+      <dd>{{ tarjeta.categoria.titulo }}</dd>
+    -->
+    </dl>
+  </div>
+  <div class="mas-beneficios-container">
+    <h4>Más beneficios</h4>
+    <ul>
+      {% for beneficio in tarjeta.beneficios offset: cantidadDeBeneficios %}
+        <li>{{beneficio.titulo}}</li>
+      {% endfor %}
+    </ul>
+    <br/>
+    <a class="button-secondary" href="{{tarjeta.paginaDeProducto}}" target="_blank">Ver todos los detalles</a>
+  </div>
+</div>
