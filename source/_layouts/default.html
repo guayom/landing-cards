@@ -18,8 +18,13 @@
     <div class="main-content">
       {{ content }}
     </div>
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{% asset_path application.js %}"></script>
+    <script type="text/javascript" src="{% asset_path jquery-3.1.0.min.js %}"></script>
     <script type="text/javascript" src="{% asset_path jquery.mixitup.min.js %}"></script>
+    <script type="text/javascript" src="{% asset_path application.js %}"></script>
+    <script type="text/javascript">
+    $(function(){
+        $('#cards-container').mixItUp();
+    });
+    </script>
   </body>
 </html>

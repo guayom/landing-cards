@@ -1,21 +1,8 @@
 ---
 beneficios:
 - sys:
-    id: 5wPuUqMiekeuwaiCoYYOsk
-  titulo: Seguros de Accidente de Viajes
-  marca:
-  - sys:
-      id: 7N0sWwZT5CgyeWgck6OMuG
-    titulo: American Express
-  nivel:
-  - sys:
-      id: ETVzYxHLygSOK6OiwS8IU
-    titulo: Dorada
-    identificador: dorada
-  - sys:
-      id: 3Pc97dzJBKuc60Ei62kOoM
-    titulo: Platino
-    identificador: platino
+    id: 2GvvxOcetiqSwgYGKE2AYI
+  titulo: Acumulación Acelerada
 - sys:
     id: 5HvIZOQNY4GMECEOIIGI4Q
   titulo: MasterCard Black Concierge
@@ -195,9 +182,6 @@ beneficios:
       id: 7N0sWwZT5CgyeWgck6OMuG
     titulo: American Express
 - sys:
-    id: 2GvvxOcetiqSwgYGKE2AYI
-  titulo: Acumulación Acelerada
-- sys:
     id: cKrEAxPRxQOAUCAak8M0c
   titulo: 3.000 millas de bienvenida
   marca:
@@ -331,6 +315,22 @@ beneficios:
     id: 17ZdYOE1MQK0OoEw8wS22M
   titulo: Compass de Cortesía
 - sys:
+    id: 5wPuUqMiekeuwaiCoYYOsk
+  titulo: Seguros de Accidente de Viajes
+  marca:
+  - sys:
+      id: 7N0sWwZT5CgyeWgck6OMuG
+    titulo: American Express
+  nivel:
+  - sys:
+      id: ETVzYxHLygSOK6OiwS8IU
+    titulo: Dorada
+    identificador: dorada
+  - sys:
+      id: 3Pc97dzJBKuc60Ei62kOoM
+    titulo: Platino
+    identificador: platino
+- sys:
     id: 2DOgHAIftiA8QEe04kOO8A
   titulo: Promociones exclusivas para clientes AAdvantage
 - sys:
@@ -412,6 +412,7 @@ tarjetas:
     sys:
       id: 2D9Yw75xfKUKG6CsaEcU42
     titulo: Viajes
+    slug: viajes
   nivel:
   - sys:
       id: 430PSmMK4MWqgG84gywwwS
@@ -604,6 +605,7 @@ tarjetas:
     sys:
       id: 485UdHpJpSWqO8qeIKIGCM
     titulo: Puntos y Recompensas
+    slug: puntos
   nivel:
   - sys:
       id: 3Pc97dzJBKuc60Ei62kOoM
@@ -710,6 +712,7 @@ tarjetas:
     sys:
       id: 4w5hEC3eF2yUouaecIIkSs
     titulo: Cashback
+    slug: cashback
   nivel:
   - sys:
       id: 4C5NkGks8EcKSacGgOAwA4
@@ -812,6 +815,7 @@ tarjetas:
     sys:
       id: 4w5hEC3eF2yUouaecIIkSs
     titulo: Cashback
+    slug: cashback
   nivel:
   - sys:
       id: 3Pc97dzJBKuc60Ei62kOoM
@@ -916,6 +920,7 @@ tarjetas:
     sys:
       id: 66YoLR9dFCm206ICuWYgyM
     titulo: Supermercados
+    slug: supermercados
   nivel:
   - sys:
       id: Y59ZhDeJSoCW2yeM6oOU8
@@ -1088,6 +1093,7 @@ tarjetas:
     sys:
       id: 485UdHpJpSWqO8qeIKIGCM
     titulo: Puntos y Recompensas
+    slug: puntos
   nivel:
   - sys:
       id: 3Pc97dzJBKuc60Ei62kOoM
@@ -1199,6 +1205,7 @@ tarjetas:
     sys:
       id: 2D9Yw75xfKUKG6CsaEcU42
     titulo: Viajes
+    slug: viajes
   nivel:
   - sys:
       id: 2fFoThDLqEieckIi4KEqYu
@@ -1337,6 +1344,7 @@ tarjetas:
     sys:
       id: 2D9Yw75xfKUKG6CsaEcU42
     titulo: Viajes
+    slug: viajes
   nivel:
   - sys:
       id: 63ittkXosgOwuC2U8GsKCq
@@ -1541,6 +1549,7 @@ tarjetas:
     sys:
       id: 67E1yEOv3ay2oswi2oUi2Y
     titulo: Otros
+    slug: otros
   nivel:
   - sys:
       id: 430PSmMK4MWqgG84gywwwS
@@ -1769,11 +1778,13 @@ imagen:
   principal: true
 categorias:
 - sys:
+    id: 485UdHpJpSWqO8qeIKIGCM
+  titulo: Puntos y Recompensas
+  slug: puntos
+- sys:
     id: 67E1yEOv3ay2oswi2oUi2Y
   titulo: Otros
-- sys:
-    id: 66YoLR9dFCm206ICuWYgyM
-  titulo: Supermercados
+  slug: otros
 marca:
 - sys:
     id: 2WeIGwmz8cEym8eaIOwEgU

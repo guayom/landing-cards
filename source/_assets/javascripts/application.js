@@ -16,7 +16,6 @@ $(window).resize(function() {
     }
   }
 });
-
 $(document).ready(function() {
   var menuToggle = $("#js-mobile-menu").unbind();
   $("#js-navigation-menu").removeClass("show");
@@ -28,5 +27,29 @@ $(document).ready(function() {
         $("#js-navigation-menu").removeAttr("style");
       }
     });
+  });
+});
+
+
+//Sticky nav
+var  mn = $(".navigation");
+    mns = "navigation-scrolled";
+    hdr = $('.hero').height();
+
+$(window).scroll(function() {
+  if( $(this).scrollTop() > hdr ) {
+    mn.addClass(mns);
+  } else {
+    mn.removeClass(mns);
+  }
+});
+
+
+//Ver requisitos
+$(document).ready(function(){
+  //action when button is pressed
+  $('.requisitos-button').click(function(){
+    console.log('hola');
+    $('.requisitos-container').closest().hide();
   });
 });

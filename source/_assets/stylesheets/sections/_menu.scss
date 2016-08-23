@@ -2,10 +2,9 @@ header.navigation {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
-  $dark-gray: #333 !default;
   $large-screen: 53.75em !default;
   $navigation-padding: 1em;
-  $navigation-background: $dark-gray;
+  $navigation-background: $gris-oscuro;
   $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
   $navigation-height: 60px;
@@ -343,5 +342,26 @@ header.navigation {
         display: block;
       }
     }
+  }
+  .navigation-scrolled{
+    position: fixed;
+    top: 0;
+    box-shadow: 2px 0px 5px #333;
+  }
+
+  .filter.active{
+    position: relative;
+  }
+  .filter.active:after{
+    $triangle-size: 2em;
+    content: " ";
+    position: absolute;
+    top:100%;
+    left: 50%;
+    margin-left: ($triangle-size/2*-1)+0.5em;
+    background-color: $navigation-background;
+    width: $triangle-size;
+    height: $triangle-size/3;
+    display:block;
   }
 }

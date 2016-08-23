@@ -3,11 +3,12 @@
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
-        {% for categoria in site.data.contentful.spaces.tarjetas.categorias %}
-          <li class="nav-link"><a href="javascript:void(0)">{{categoria.titulo}}</a></li>
+        <li class="nav-link"><a  href="javascript:void(0)" class="filter" data-filter="all">Todas</a></li>
+        {% for categoria in site.data.categorias %}
+          <li class="nav-link"><a class="filter" data-filter=".{{categoria.slug}}" href="javascript:void(0)">{{categoria.titulo}}</a></li>
         {% endfor %}
       </ul>
-    </nav>
+    </nav><!--
     <div class="navigation-tools">
       <div class="search-bar">
         <form role="search">
@@ -17,6 +18,6 @@
           </button>
         </form>
       </div>
-    </div>
+    </div>-->
   </div>
 </header>

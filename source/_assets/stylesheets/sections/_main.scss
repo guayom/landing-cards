@@ -42,12 +42,20 @@
 }
 .card-options{
   @include span-columns(2);
+  text-align: center;
   .button{
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 10px;
   }
 }
 .disclaimer{
   margin-top: 10px;
   color: lighten($medium-gray, 1%);
+}
+.mix{
+    display: none;
+}
+.mas-info{
+  text-align: center;
 }

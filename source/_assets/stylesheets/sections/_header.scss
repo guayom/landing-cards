@@ -1,5 +1,6 @@
 header.hero{
-  @include linear-gradient($azul-oscuro, darken($azul-oscuro, 10%));
+  //@include linear-gradient($azul-oscuro, darken($azul-oscuro, 10%));
+  background: url(../images/fondo-dorado.png);
   //@include margin(null null $main-spacing null);
   .header-content{
     @include outer-container;
@@ -12,4 +13,9 @@ header.hero{
   h2{
     color: $blanco;
   }
+}
+.logo{
+  background: #fff;
+  padding: 30px 20px 20px 20px;
+  display: inline-block;
 }
