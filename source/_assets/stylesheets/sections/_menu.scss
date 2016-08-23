@@ -343,11 +343,6 @@ header.navigation {
       }
     }
   }
-  .navigation-scrolled{
-    position: fixed;
-    top: 0;
-    box-shadow: 2px 0px 5px #333;
-  }
 
   .filter.active{
     position: relative;
@@ -364,4 +359,9 @@ header.navigation {
     height: $triangle-size/3;
     display:block;
   }
+}
+.navigation-scrolled{
+  position: fixed;
+  top: 0;
+  box-shadow: 2px 0px 5px #333;
 }
