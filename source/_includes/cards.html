@@ -10,6 +10,13 @@
         <p>{{tarjeta.breveDescripcion | markdownify }}</p>
         <dl class="dl-horizontal">
           <dt>Cargo Administrativo: </dt><dd>{{tarjeta.cargoAdministrativo}}</dd>
+          <dt>Disponible en: </dt>
+          <dd>
+          {% for marca in tarjeta.marcas %}
+            <!-- cambiar por logos -->
+            {{marca.titulo}}
+          {% endfor %}
+          </dd>
 <!--
           <dt>Niveles</dt>
           <dd>

@@ -50,6 +50,7 @@ $(document).ready(function(){
   //action when button is pressed
   $('.requisitos-button').click(function(){
     console.log('hola');
+    //look for closet $('.requisitos-container')
     $('.requisitos-container').closest().hide();
   });
 });
