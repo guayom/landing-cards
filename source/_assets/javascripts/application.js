@@ -28,6 +28,18 @@ $(document).ready(function() {
       }
     });
   });
+
+  //Botón de más información
+  $.fn.toggleHTML = function(a, b) {
+    return this.html(function(_, html) {
+        return $.trim(html) === a ? b : a;
+    });
+  }
+  $('.mas-info').click(function(){
+    var targetDiv = $(this).data('target');
+    $('.'+targetDiv).slideToggle();
+    $(this).toggleHTML('Ocultar', 'Más información');
+  });
 });
 
 

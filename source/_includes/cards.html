@@ -23,7 +23,7 @@
       </div>
       <div class="card-options">
         <a href="{{tarjeta.form}}" class="button" />Solicitar</a>
-        <a href="{{tarjeta.info_link}}" class="mas-info">Más información</a>
+        <a href="javascript:void(0)" class="mas-info" data-target="mas-info-{{forloop.index}}">Más información</a>
       </div>
       {% include mas-info.html %}
     </div>

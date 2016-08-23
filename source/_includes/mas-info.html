@@ -1,4 +1,4 @@
-<div class="mas-info-container">
+<div class="mas-info-container mas-info-{{forloop.index}}">
   <div class="mas-info-general">
     <dl>
       <dt>Requisitos</dt>
@@ -19,7 +19,7 @@
         {{marca.titulo}}
       {% endfor %}
       </dd>
-      <!--
+
       <dt>Niveles</dt>
       <dd>
         <ul class="niveles">
@@ -30,7 +30,7 @@
       </dd>
       <dt>Categoría</dt>
       <dd>{{ tarjeta.categoria.titulo }}</dd>
-    -->
+
     </dl>
   </div>
   <div class="mas-beneficios-container">

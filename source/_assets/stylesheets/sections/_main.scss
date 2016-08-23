@@ -52,6 +52,11 @@
 .mas-info-container{
   @include outer-container;
   @include row();
+  display: none;
+
+  &.shown{
+    
+  }
 
   .ocultar-mas-info{
     display: block;
