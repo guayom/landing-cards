@@ -28,6 +28,7 @@ $(document).ready(function() {
       }
     });
   });
+
 });
 
 
@@ -42,15 +43,4 @@ $(window).scroll(function() {
   } else {
     mn.removeClass(mns);
   }
-});
-
-
-//Ver requisitos
-$(document).ready(function(){
-  //action when button is pressed
-  $('.requisitos-button').click(function(){
-    console.log('hola');
-    //look for closet $('.requisitos-container')
-    $('.requisitos-container').closest().hide();
-  });
 });

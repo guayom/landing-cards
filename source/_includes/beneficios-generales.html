@@ -1,0 +1,8 @@
+<p>Todas nuestras tarjetas cuentan con los siguientes beneficios:</p>
+<ul>
+  {% for beneficioGeneral in site.data.contentful.spaces.tarjetas.beneficios %}
+    {% if beneficioGeneral.general == true %}
+      <li>{{beneficioGeneral.titulo}}</li>
+    {% endif %}
+  {% endfor %}
+</ul>
