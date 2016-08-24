@@ -45,13 +45,16 @@ $(document).ready(function() {
 
 //Sticky nav
 var  mn = $(".navigation");
+var header = $(".header");
     mns = "navigation-scrolled";
-    hdr = $('.hero').height();
+    hdr = $('.header').height();
 
 $(window).scroll(function() {
-  if( $(this).scrollTop() > hdr ) {
+  if( $(this).scrollTop() > hdr / 2 ) {
     mn.addClass(mns);
+    header.addClass(mns);
   } else {
     mn.removeClass(mns);
+    header.removeClass(mns);
   }
 });

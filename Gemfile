@@ -14,4 +14,5 @@ gem "mini_magick"
 group :jekyll_plugins do
   gem "jekyll-contentful-data-import"
   gem 'hawkins'
+  #jekyll liveserve
 end

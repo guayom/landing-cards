@@ -24,6 +24,9 @@ header.navigation {
   width: 100%;
   z-index: 999;
 
+  position: absolute;
+  top: 106px;
+
   .navigation-wrapper {
     @include clearfix;
     @include outer-container;
@@ -358,9 +361,9 @@ header.navigation {
     border-right: $triangle-size/1.5 solid transparent;
     border-top: $navigation-background $triangle-size/2 solid;
   }
-}
-.navigation-scrolled{
-  position: fixed;
-  top: 0;
-  //box-shadow: 2px 0px 5px #333;
+  &.navigation-scrolled{
+    position: fixed;
+    top: 53px;
+    //box-shadow: 2px 0px 5px #333;
+  }
 }

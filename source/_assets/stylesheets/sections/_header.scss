@@ -1,10 +1,13 @@
-header.hero{
-  //@include linear-gradient($azul-oscuro, darken($azul-oscuro, 10%));
-  background: url(../images/fondo-dorado.png);
-  color: #fff;
+header.header{
+  z-index: 100;
+  position: absolute;
+  top:0;
+  background: #fff;
+  min-height: 53px;
+  min-width: 100%;
+
   .header-content{
     @include outer-container;
-    @include padding(40px 0)
   }
   h1{
     color: $blanco;
@@ -18,8 +21,22 @@ header.hero{
     color: $blanco;
   }
   .logo{
+    @include padding(30px 0);
+    img{
+      height: 40px;
+      @include transition(all 0.5s);
+      margin-left: 20px;
+    }
+  }
+  &.navigation-scrolled{
+    position: fixed;
+    top: 0;
     background: #fff;
-    padding: 30px 20px 20px 20px;
-    display: inline-block;
+    .logo{
+      @include padding(12px 0);
+      img{
+        height: 30px;
+      }
+    }
   }
 }
