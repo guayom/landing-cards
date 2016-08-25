@@ -1,24 +1,24 @@
 ---
 layout: tarjeta
-title: Club La Nación de Credomatic
-subtitle: "La única tarjeta que te ofrece todos lo beneficios de Club La Nación y los beneficios de American Express"
+title: Tarjeta Club La Nacion American Express de Credomatic
+subtitle: "La única tarjeta que le ofrece todos lo beneficios de Club La Nación y los beneficios de American Express"
 form: https://www.baccredomatic.com/es-cr/form/2611
 mainImageUrl: "/images/tarjetas/tarjeta_club_nacion.png"
-mainBenefit: "2 meses de suscripción al periódico La Nación por sólo ¢1.200"
+mainBenefit: Solicite su Compass y reciba el dispositivo gratis
 beneficios:
   - title: "Descuentos únicos en más de 150 comercios"
     icon: '<i class="fa fa-dollar"></i>'
   - title: "Acceso a eventos especiales"
     icon: '<i class="fa fa-ticket"></i>'
-  - title: "hasta 3% de Cash Back en compras"
+  - title: "Hasta 3% de Cash Back en compras"
     icon: '<i class="fa fa-percent"></i>'
-  - title: "Solicitá tu Compass y recibí el dispositivo gratis"
+  #- title: "Solicite su Compass y reciba el dispositivo gratis"
     #icon: '<img src="/images/tarjetas/compass.png" />'
-    icon: '<i class="fa fa-check"></i>'
+    #icon: '<i class="fa fa-check"></i>'
 ---
 <div class="beneficios">
   <ul>
-    <h3>Y disfrutá de otros beneficios como</h3>
+    <h3>Y disfrute de otros beneficios como</h3>
     {% for beneficio in page.beneficios limit: 4 %}
       <li>
         {{beneficio.icon}}
@@ -26,5 +26,5 @@ beneficios:
       </li>
     {% endfor %}
   </ul>
-  <a href="{{page.form}}" class="button blue">Solicitala aquí</a>
+  <a href="{{page.form}}" class="button blue">Solicitela aquí</a>
 </div>
