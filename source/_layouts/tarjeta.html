@@ -1,0 +1,62 @@
+---
+# Layouts must stay in HTML
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{% asset_path tarjetas-styles.css %}">
+    <link rel="stylesheet" href="{% asset_path font-awesome.min.css %}">
+  </head>
+  <body class="tarjetas">
+    {% include tarjetas/hero.html %}
+    <div class="main-benefit">
+      <div class="main-benefit-content">
+        <h3>Solicitá tu tarjeta ahora y obtené</h3>
+        <p>{{page.mainBenefit}}</p>
+      </div>
+      <div class="main-benefit-boton">
+        <a href="{{page.form}}" class="button blue">Solicitala aquí</a>
+      </div>
+    </div>
+    <div class="main-content">
+      {{ content }}
+    </div>
+    <div class="gray-bg">
+      <div class="wrapper">
+        <div class="requisitos">
+          <h4>Requisitos</h4>
+          <ul>
+            <li>Cédula de identidad</li>
+            <li>Comprobante de dirección</li>
+            <li>Comprobante de ingresos</li>
+          </ul>
+        </div>
+        <div class="tasas-de-interes">
+          <table>
+            <thead>
+              <tr>
+                <th>Tasas de interés</th>
+                <th>Colones</th>
+                <th>Dolares</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr><td>Tasa Preferencial Mensual</td>
+            <td>3.84%</td>
+            <td>2.75%</td>
+            </tr><tr><td>Tasa Normal Mensual</td>
+            <td>4.16%</td>
+            <td>2.75%</td>
+            </tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

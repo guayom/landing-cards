@@ -1,0 +1,81 @@
+.hero {
+  background: $main-blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  @include clearfix;
+
+  background-color: #032455; // Old browsers vertical); // IE6-9
+  //@include background-image(linear-gradient(top, $main-blue 4%, lighten($main-blue, 13%) 100%));
+  background: url(../images/tarjetas/fondo-nacion.jpg);
+
+  .hero-content{
+    @include outer-container;
+    position:relative;
+  }
+  .device-text {
+    @include media($large-screen) {
+      float: left;
+      max-width: 50%;
+      padding: 4em 0;
+    }
+
+    h1 {
+      color: $device-text-color;
+      font-size: 2.8em;
+      margin: 0 0 0.5em 0;
+      small{
+        font-size: 0.5em;
+        font-weight: 400;
+      }
+    }
+
+    p {
+      color: $device-text-color;
+      line-height: 1.5em;
+      margin-bottom: 1.5em;
+      font-size: 1.3em;
+    }
+  }
+  .device-background{
+
+  }
+  .tarjeta{
+    position: absolute;
+    right: 0;
+    bottom: -12%;
+    max-width: 400px;
+    img{
+      width: 100%;
+    }
+  }
+}
+.main-benefit{
+  color: $gris_oscuro;
+  //text-align: center;
+  padding: 2em 0;
+  border-bottom: 1px solid $light-gray;
+  font-size: 1.8em;
+  font-weight: bold;
+  @include outer-container;
+  margin-bottom: 2em;
+  h3{
+    color: $gris_oscuro;
+    margin-bottom: 0;
+    font-size: 0.7em;
+    font-weight: 400;
+  }
+  p{
+    margin: 0;
+  }
+}
+.main-benefit-content{
+  @include span-columns(9);
+}
+.main-benefit-boton{
+  @include span-columns(3);
+  .button{
+    font-size: 0.8em;
+    background: $main-blue;
+  }
+}

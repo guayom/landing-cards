@@ -1,0 +1,24 @@
+//Colores
+$main-blue: #032455;
+$lighter-gray: #f0f0f0;
+$dark-gray: #333;
+
+//Nacion
+$celeste: #70CEEC;
+
+//HERO
+$base-border-radius: 3px !default;
+$action-color: #477DCA !default;
+$large-screen: 53.75em !default;
+$device-padding-vertical: 5em;
+$device-padding-horizontal: 0.4em;
+$device-screen-width: 14em;
+$device-screen-height: 25em;
+$device-background: darken(gray, 40%);
+$device-backside-background: darken($device-background, 10%);
+$device-text-color: white;
+$device-background-top: #162C4C;
+$device-background-bottom: #0A120D;
+$gradient-angle: 10deg;
+$device-image: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png";
+$device-screen-image: "../images/tarjetas/tarjeta-club-ncion.jpg";
