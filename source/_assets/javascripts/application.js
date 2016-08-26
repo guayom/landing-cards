@@ -29,6 +29,15 @@ $(document).ready(function() {
     });
   });
 
+  //Change hero text
+  $('.filter').click(function(){
+    var newText = $(this).data('titulo');
+    var newDescription = $(this).data('description');
+    $('.fixed-text').html(newText);
+    $('.sliding-text').html(newDescription);
+  });
+
+
   //Botón de más información
   $.fn.toggleHTML = function(a, b) {
     return this.html(function(_, html) {

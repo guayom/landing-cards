@@ -1,10 +1,15 @@
 - titulo: Cashback
   slug: cashback
+  descripcion: Obtenga dinero de vuelta por cada una de sus compras
 - titulo: Viajes
   slug: viajes
+  descripcion: Acumule millas y utilícelas para comprar tiquetes aéreos
 - titulo: Puntos y Recompensas
   slug: puntos
+  descripcion: Acumule puntos para canjeables por premios
 - titulo: Supermercados
   slug: supermercados
+  descripcion: Obtenga beneficios especiales en su supermercado de preferencia
 - titulo: Otros
   slug: otros
+  descripcion: Tarjetas con beneficios específicos
