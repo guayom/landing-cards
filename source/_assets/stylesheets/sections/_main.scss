@@ -57,11 +57,6 @@
   &.shown{
 
   }
-
-  .ocultar-mas-info{
-    display: block;
-    width: 100%;
-  }
   .mas-info-general{
     @include span-columns(4);
     @include shift(2);

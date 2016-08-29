@@ -17,6 +17,11 @@ $(window).resize(function() {
   }
 });
 
+function scrollToTop() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+};
+
 //show rotator text in hero
 function rotatorToHero(){
   var targetDiv = $( ".sliding-text" );
@@ -61,6 +66,8 @@ $(document).ready(function() {
       $('.fixed-text').html(newText);
       $('.sliding-text').html(newDescription);
     }
+
+    scrollToTop();
   });
 
 
