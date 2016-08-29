@@ -27,5 +27,8 @@
     font-size: 0.8em;
     background: $main-blue;
     margin-top: 60px;
+    &:hover{
+      background: $celeste;
+    }
   }
 }

@@ -34,17 +34,18 @@
     .tarjeta{
       @include span-columns(6);
       position: relative;
-      //display: none;
       img{
         position: absolute;
         top: 0;
-        right: 0;
+        right: -10px;
         max-width: 400px;
+        opacity: 0;
       }
     }
   }
   .device-text {
     @include span-columns(6);
+    opacity: 0;
 
     @include media($large-screen) {
       float: left;
