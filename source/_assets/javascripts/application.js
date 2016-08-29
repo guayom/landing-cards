@@ -16,7 +16,26 @@ $(window).resize(function() {
     }
   }
 });
+
+//show rotator text in hero
+function rotatorToHero(){
+  var targetDiv = $( ".sliding-text" );
+  var originalDiv = $( ".rotatorText" ).find('span');
+  $( originalDiv ).clone().appendTo(targetDiv);
+  var newDiv = $( ".sliding-text > span" );
+  $(newDiv).addClass("rotate");
+
+  //Simple text rotator
+  $(".rotate").textrotator({
+    animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+    separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+    speed: 6000 // How many milliseconds until the next word show.
+  });
+}
+
 $(document).ready(function() {
+  rotatorToHero();
+
   var menuToggle = $("#js-mobile-menu").unbind();
   $("#js-navigation-menu").removeClass("show");
 

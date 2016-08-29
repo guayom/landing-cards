@@ -1,11 +1,13 @@
 <div class=hero>
   <div class="fixed-text">¿Por qué una tarjeta de Credomatic?</div>
-  <div class="sliding-text">Pagos en Sucursales de BAC Credomatic & Red de Pagos</div>
-  <!--
-Pagos en Sucursales de BAC Credomatic & Red de Pagos
-Servicios en línea 24 horas por medio de baccredomatic.com & a la Central Telefónica.
-Hasta 25 días posterior a su fecha de corte para realizar su pago.
-Posibilidad de realizar Extrafinanciamientos y compras en TASA CERO sin interes.
-Posibilidad de pagar su tarjeta en línea por medio del sistema SINPE.
-Hasta 66 meses de financiamiento.-->
+  <div class="sliding-text"></div>
+</div>
+<div class="hide rotatorText">
+  <span>
+  {% for beneficioGeneral in site.data.contentful.spaces.tarjetas.beneficios %}
+    {% if beneficioGeneral.general == true %}
+      {{beneficioGeneral.titulo}}{% unless forloop.last == true %},{% endunless %}
+    {% endif %}
+  {% endfor %}
+  </span>
 </div>
