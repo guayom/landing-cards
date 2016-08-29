@@ -15,8 +15,27 @@ body{
   @include outer-container;
 }
 .tasas-de-interes{
-  @include span-columns(6);
+  @include span-columns(8);
+  @include shift(2);
+  th, td{
+    text-align:right;
+  }
+  th:first-child, td:first-child{
+    text-align:left;
+  }
 }
 .requisitos{
   @include span-columns(6);
+}
+.title-row{
+  @include outer-container;
+  margin-bottom: 40px;
+  text-align: center;
+  h3{
+    font-size: 2em;
+    clear: both;
+    display: block;
+    width: 100%;
+    color: $celeste;
+  }
 }

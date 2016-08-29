@@ -13,43 +13,45 @@
   //@include background-image(linear-gradient(top, $main-blue 4%, lighten($main-blue, 13%) 100%));
 
   .hero-content{
-    @include outer-container;
+    @include span-columns(8);
+    @include shift(2);
     position:relative;
-  }
-  .device-text {
-    @include media($large-screen) {
-      float: left;
-      max-width: 50%;
-      padding: 4em 0;
-    }
 
     h1 {
       color: $device-text-color;
-      font-size: 2.5em;
-      margin: 0 0 0.5em 0;
+      font-size: 3em;
+      margin: 1.4em 0 1.4em 0;
+      text-align: center;
       small{
-        font-size: 0.5em;
+        font-size: 0.7em;
         font-weight: 400;
       }
+    }
+
+    .tarjeta{
+      @include span-columns(6);
+      position: relative;
+      img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 400px;
+      }
+    }
+  }
+  .device-text {
+    @include span-columns(6);
+
+    @include media($large-screen) {
+      float: left;
+      padding: 4em 0;
     }
 
     p {
       color: $device-text-color;
       line-height: 1.5em;
-      margin-bottom: 1.5em;
-      font-size: 1.3em;
-    }
-  }
-  .device-background{
-
-  }
-  .tarjeta{
-    position: absolute;
-    right: 0;
-    bottom: -12%;
-    max-width: 400px;
-    img{
-      width: 100%;
+      margin-bottom:0;
+      font-size: 1.5em;
     }
   }
 }

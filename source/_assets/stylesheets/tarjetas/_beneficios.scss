@@ -1,5 +1,6 @@
 .beneficios{
-  @include outer-container();
+  @include span-columns(8 of 12);
+  @include shift(2);
   margin-bottom: 2em;
 }
 .beneficio{
@@ -23,17 +24,5 @@
     h2{
       font-weight: 400;
     }
-  }
-}
-.title-row{
-  @include outer-container;
-  margin-bottom: 40px;
-  h3{
-    font-size: 2em;
-    //text-align: center;
-    clear: both;
-    display: block;
-    width: 100%;
-    color: $celeste;
   }
 }
