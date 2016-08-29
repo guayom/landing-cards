@@ -4,27 +4,40 @@ title: Tarjeta Club La Nacion American Express de Credomatic
 subtitle: "La única tarjeta que le ofrece todos lo beneficios de Club La Nación y los beneficios de American Express"
 form: https://www.baccredomatic.com/es-cr/form/2611
 mainImageUrl: "/images/tarjetas/tarjeta_club_nacion.png"
-mainBenefit: Solicite su Compass y reciba el dispositivo gratis
+mainBenefit: "Solicite su tarjeta ahora y obtenga su Compass gratis<br/><small>(Valor original: $30)</small>"
 beneficios:
-  - title: "Descuentos únicos en más de 150 comercios"
-    icon: '<i class="fa fa-dollar"></i>'
-  - title: "Acceso a eventos especiales"
-    icon: '<i class="fa fa-ticket"></i>'
-  - title: "Hasta 3% de Cash Back en compras"
-    icon: '<i class="fa fa-percent"></i>'
-  #- title: "Solicite su Compass y reciba el dispositivo gratis"
-    #icon: '<img src="/images/tarjetas/compass.png" />'
+  - title: "Descuentos"
+    description: Disfrute de descuentos únicos en más de 150 comercios
+    icon: '<i class="fa fa-dollar" aria-hidden="true"></i>'
+  - title: "Eventos especiales"
+    description: Obtenga entradas a eventos especiales de Club La Nación
+    icon: '<i class="fa fa-ticket" aria-hidden="true"></i>'
+  - title: "Cash Back"
+    description: Recupere hasta 3% en sus compras
+    icon: '<i class="fa fa-percent" aria-hidden="true"></i>'
+  - title: Es una American Express!
+    description: Disfrute de los beneficios que sólo American Express ofrece
+    icon: '<i class="fa fa-cc-amex" aria-hidden="true"></i>'
     #icon: '<i class="fa fa-check"></i>'
 ---
+<div class="title-row">
+  <h3>Y disfrute de otros beneficios como</h3>
+</div>
 <div class="beneficios">
-  <ul>
-    <h3>Y disfrute de otros beneficios como</h3>
-    {% for beneficio in page.beneficios limit: 4 %}
-      <li>
-        {{beneficio.icon}}
-        {{beneficio.title}}
-      </li>
-    {% endfor %}
-  </ul>
-  <a href="{{page.form}}" class="button blue">Solicitela aquí</a>
+  {% for beneficio in page.beneficios limit: 4 %}
+  <div class="beneficio">
+		<div class="icono">
+			{{beneficio.icon}}
+		</div>
+		<div class="descripcion">
+			<h1>
+				{{beneficio.title}}
+			</h1>
+			<h2>
+				{{beneficio.description}}
+			</h2>
+		</div>
+	</div>
+  {% endfor %}
+  <!-- <a href="{{page.form}}" class="button blue">Solicitela aquí</a> -->
 </div>
