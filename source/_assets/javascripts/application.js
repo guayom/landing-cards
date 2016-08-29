@@ -21,6 +21,7 @@ $(window).resize(function() {
 function rotatorToHero(){
   var targetDiv = $( ".sliding-text" );
   var originalDiv = $( ".rotatorText" ).find('span');
+  $(targetDiv).empty();
   $( originalDiv ).clone().appendTo(targetDiv);
   var newDiv = $( ".sliding-text > span" );
   $(newDiv).addClass("rotate");
@@ -52,8 +53,14 @@ $(document).ready(function() {
   $('.filter').click(function(){
     var newText = $(this).data('titulo');
     var newDescription = $(this).data('description');
-    $('.fixed-text').html(newText);
-    $('.sliding-text').html(newDescription);
+    var filter = $(this).data('filter');
+
+    if(filter == 'all'){
+      rotatorToHero()
+    }else{
+      $('.fixed-text').html(newText);
+      $('.sliding-text').html(newDescription);
+    }
   });
 
 
