@@ -61,6 +61,7 @@ $(document).ready(function() {
     var filter = $(this).data('filter');
 
     if(filter == 'all'){
+      $('.fixed-text').html(newText);
       rotatorToHero()
     }else{
       $('.fixed-text').html(newText);
