@@ -1,0 +1,15 @@
+@include media($mobile) {
+  body{
+    color: red;
+  }
+  .hero{
+    .hero-content {
+        @include span-columns(10);
+
+    }
+    h1{
+      color: red;
+    }
+  }
+
+}
