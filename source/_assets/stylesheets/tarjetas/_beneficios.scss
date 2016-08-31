@@ -1,14 +1,6 @@
-.beneficios{
-  @include span-columns(8 of 12);
-  @include shift(2);
-  margin-bottom: 2em;
-}
 .beneficio{
-  @include span-columns(6);
-  @include omega(2n);
   margin-bottom: 20px;
   .icono{
-    @include span-columns(1 of 6);
     text-align: center;
     font-size: 3em;
     i{
@@ -16,7 +8,6 @@
     }
   }
   .descripcion{
-    @include span-columns(5 of 6);
     h1{
       margin-top: 13px;
       color: $celeste;

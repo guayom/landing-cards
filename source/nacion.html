@@ -20,9 +20,8 @@ beneficios:
     icon: '<i class="fa fa-cc-amex" aria-hidden="true"></i>'
     #icon: '<i class="fa fa-check"></i>'
 ---
-<div class="title-row">
-  <h3>Y disfrute de otros beneficios como</h3>
-</div>
+<!-- <h3 class="section-title">Y disfrute de otros beneficios como</h3> -->
+
 <div class="beneficios">
   {% for beneficio in page.beneficios limit: 4 %}
   <div class="beneficio">
@@ -39,5 +38,8 @@ beneficios:
 		</div>
 	</div>
   {% endfor %}
-  <div class="title-row"><a href="{{page.form}}" class="button blue">Solicitela aquí</a></div>
+</div>
+
+<div class="wrapper text-center">
+  <a href="{{page.form}}" class="button blue">Solicitela aquí</a>
 </div>

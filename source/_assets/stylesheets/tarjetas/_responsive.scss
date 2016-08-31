@@ -1,15 +1,145 @@
+.hero-content, .main-benefit, .beneficios, .wrapper{
+  @include outer-container(800px);
+  padding: 1.4em 0;
+}
+.main-content{
+  margin-bottom: 4em;
+}
 @include media($mobile) {
-  body{
-    color: red;
+  .hero-content, .main-benefit, .beneficios, .gray-bg{
+    padding: 1.4em;
   }
+  .wrapper{
+    padding:0;
+  }
+
   .hero{
-    .hero-content {
-        @include span-columns(10);
+    margin-bottom: 20px;
+  }
 
-    }
+  .hero-content{
     h1{
-      color: red;
+      font-size: 1.8em;
+      small{
+        font-size: 0.6em;
+      }
+    }
+    .device-text{
+      @include span-columns(12 of 12);
+      @include omega();
+      text-align: center;
+    }
+    .tarjeta{
+      @include span-columns(12 of 12);
+      @include omega();
+      position: relative;
+      padding-top: 170px;
+      margin-top: 40px;
+      img{
+        position: absolute;
+        top: 0;
+        right: -10px;
+        max-width: 100%;
+        opacity: 0;
+      }
+    }
+  }
+  .main-benefit-content, .main-benefit-boton{
+    @include span-columns(12 of 12);
+    @include omega();
+    text-align: center;
+    .button{
+      margin-top: 20px;
+    }
+  }
+  .main-benefit-boton{
+
+  }
+  .beneficios{
+    text-align: center;
+    padding-top: 0;
+  }
+  .beneficio{
+    @include span-columns(6 of 6);
+    @include omega(2n);
+    .icono{
+      @include span-columns(2 of 6);
+    }
+    .descripcion{
+      @include span-columns(4 of 6);
+      @include omega();
+      text-align: left;
     }
   }
 
+  .tasas-de-interes{
+    //@include span-columns(4 of 12);
+  }
+}
+@include media($desktop) {
+  .hero-content, .main-benefit, .beneficios, .wrapper{
+    padding: 4em 0;
+  }
+  .hero-content{
+    h1 {
+      font-size: 2em;
+      small{
+        font-size: 0.7em;
+      }
+    }
+    .device-text{
+      @include span-columns(6 of 12);
+      padding-top: 3em;
+    }
+    .tarjeta{
+      @include span-columns(6 of 12);
+      position: relative;
+      padding-top: 0;
+      margin-top: 0;
+      img{
+        position: absolute;
+        top: -1.5em;
+        right: -10px;
+        max-width: 400px;
+        opacity: 0;
+      }
+    }
+  }
+  .main-benefit{
+    padding: 2em 0;
+  }
+  .main-benefit-content{
+    @include span-columns(6 of 12);
+    text-align: left;
+    font-size: 0.9em;
+  }
+  .main-benefit-boton{
+    @include span-columns(6 of 12);
+    @include omega();
+    .button{
+      margin-top: 60px;
+    }
+  }
+  .beneficios{
+    padding: 0;
+    margin-bottom: 0;
+    .button{
+      margin-top: 40px;
+    }
+  }
+  .beneficio{
+    @include span-columns(6 of 12);
+    //@include omega(2n);
+    .icono{
+      @include span-columns(2 of 6);
+    }
+    .descripcion{
+      @include span-columns(4 of 6);
+      text-align: left;
+    }
+  }
+  .tasas-de-interes{
+    // @include span-columns(8 of 12);
+    // @include shift(2);
+  }
 }

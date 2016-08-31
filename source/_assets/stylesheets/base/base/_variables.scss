@@ -1,0 +1,74 @@
+// Typography
+$base-font-family: $helvetica;
+$heading-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+//Main small-spacing
+$main-spacing: 20px;
+
+// Colors
+$blue: #477dca;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+$lighter-gray: #f0f0f0;
+
+//Colores de tarjetas
+$dorada: #b29600;
+$black: #000;
+$platino: #e5e4e2;
+$clasica: #477dca;
+$premium: #000005;
+$elite: #000005;
+$infinite: #000005;
+
+//Credomatic Colors
+$rojo: #F45352;
+$dorado: #9A877A;
+$azul-oscuro: #394457;
+$azul-medio: #49566A;
+$gris-oscuro: #6D6E71;
+$gris-medio: #ccc;
+$gris-claro: #F1F1F1;
+$blanco: #ffffff;
+
+
+// Font Colors
+$base-background-color: #fff;
+$base-font-color: $dark-gray;
+$action-color: $rojo;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Element Colors
+$main-background-color: $blanco;
+
+//Breakpoints
+$mobile-size:em(320);
+$tablet-size:720px;
+$desktop-size:em(960);
+$largedesktop-size:em(1050);
+
+// Bourbon Neat Breakpoints
+$mobile: new-breakpoint(min-width $mobile-size 4);
+$tablet: new-breakpoint(min-width $tablet-size 8);
+$desktop: new-breakpoint(min-width $desktop-size 12);
+$largedesktop: new-breakpoint(min-width $largedesktop-size 16);

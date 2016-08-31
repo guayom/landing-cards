@@ -5,8 +5,6 @@
   border-bottom: 1px solid $light-gray;
   font-size: 1.8em;
   font-weight: bold;
-  @include span-columns(8);
-  @include shift(2);
   margin-bottom: 2em;
   p{
     margin: 0;
@@ -16,17 +14,11 @@
     }
   }
 }
-.main-benefit-content{
-  @include span-columns(6);
-}
 .main-benefit-boton{
-  @include span-columns(6);
   position: relative;
   text-align: center;
   .button{
-    font-size: 0.8em;
     background: $main-blue;
-    margin-top: 60px;
     &:hover{
       background: $celeste;
     }

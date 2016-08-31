@@ -1,9 +1,6 @@
 body{
   padding-top: 0;
 }
-.main-content{
-  @include outer-container;
-}
 .blue{
   background: $main-blue;
 }
@@ -11,12 +8,7 @@ body{
   background: $lighter-gray;
   padding: 4em 0;
 }
-.wrapper{
-  @include outer-container;
-}
 .tasas-de-interes{
-  @include span-columns(8);
-  @include shift(2);
   th, td{
     text-align:right;
   }
@@ -24,29 +16,30 @@ body{
     text-align:left;
   }
 }
-.requisitos{
-  @include span-columns(6);
-}
-.title-row{
-  @include outer-container;
+.section-title{
+  //@include outer-container;
   margin-bottom: 40px;
   text-align: center;
-  h3{
-    font-size: 2em;
-    clear: both;
-    display: block;
-    width: 100%;
-    color: $celeste;
-  }
+  font-size: 2em;
+  clear: both;
+  display: block;
+  width: 100%;
+  color: $celeste;
 }
 h1, h2, h3, h4, p, a{
   font-family: 'Montserrat', sans-serif;
 }
-.button:hover{
-  background: $celeste;
+.button{
+  font-size: 30px;
+  &:hover{
+    background: $celeste;
+  }
 }
 .disclaimer{
   margin-top: 20px;
   text-align: center;
   font-size: 0.8em;
+}
+.text-center{
+  text-align: center;
 }
