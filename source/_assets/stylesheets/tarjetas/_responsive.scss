@@ -90,6 +90,7 @@
     .device-text{
       @include span-columns(6 of 12);
       padding-top: 3em;
+      text-align: left;
     }
     .tarjeta{
       @include span-columns(6 of 12);
