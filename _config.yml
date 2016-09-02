@@ -7,6 +7,9 @@ gems:
 source: source
 destination: build
 
+sass:
+    style: compressed
+    
 assets:
   cachebust: soft
 
