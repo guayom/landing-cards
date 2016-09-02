@@ -11,8 +11,6 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="stylesheet" href="{% asset_path tarjetas-styles.css %}">
-    <link rel="stylesheet" href="{% asset_path font-awesome.min.css %}">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
   <body class="tarjetas">
     {% include tarjetas/hero.html %}
@@ -62,5 +60,26 @@
     </div>
     <script type="text/javascript" src="{% asset_path jquery-3.1.0.min.js %}"></script>
     <script type="text/javascript" src="{% asset_path tarjetas.js %}"></script>
+    <div id="scriptsForHead">
+      <!-- Google Analytics Content Experiment code -->
+      <script>function utmx_section(){}function utmx(){}(function(){var
+      k='114785307-1',d=document,l=d.location,c=d.cookie;
+      if(l.search.indexOf('utm_expid='+k)>0)return;
+      function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+      indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+      length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+      '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+      '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+      '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+      valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+      '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+      </script><script>utmx('url','A/B');</script>
+      <!-- End of Google Analytics Content Experiment code -->
+    </div>
+    <script type="text/javascript">
+      $('head').append("");
+      var js = document.getElementById('scriptsForHead').innerHTML;
+      $('head').prepend(js);
+    </script>
   </body>
 </html>
