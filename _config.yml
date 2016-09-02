@@ -7,9 +7,6 @@ gems:
 source: source
 destination: build
 
-sass:
-    style: compressed
-    
 assets:
   cachebust: soft
 
@@ -23,8 +20,18 @@ baseurl:
 # Build settings
 markdown: kramdown
 
-contentful:
-  spaces:
-    - tarjetas:
-        space: 9cds0lha1plv
-        access_token: 7d2b95ab7da57baf4f3a4f555b0cb2cf4e5b9d1c8e0721b49dbbb154bac8a771
+assets:
+  compress:
+    css: default
+    js: default
+  cache: default
+  cdn: https://cdn.example.com
+  skip_baseurl_with_cdn: false
+  skip_prefix_with_cdn: false
+  prefix: "/assets"
+  assets:
+    - "*.png"
+    - "bundle.css"
+  digest: true
+  sources:
+    - "_assets/folder"
