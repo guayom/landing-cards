@@ -1,16 +1,23 @@
 .hero{
   padding: 5em 4em;
   text-align: center;
-  margin-top: 45px;
+  //margin-top: 45px;
   position: relative;
   color: $blanco;
 
-  background-image: url(../images/hero.jpg);
+
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center 115px;
   background-size: 100%;
   z-index: 5;
+
+  @include media($mobile) {
+    background-image: url(../images/iphonebg.jpg);
+  }
+  @include media($desktop) {
+    background-image: url(../images/hero.jpg);
+  }
 
   &:after{
     content:"";

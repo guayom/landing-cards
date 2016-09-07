@@ -351,3 +351,9 @@ header.navigation {
     }
   }
 }
+.navigation-scrolled{
+  @include media($mobile) {
+    position: fixed;
+    top: 60px;
+  }
+}
