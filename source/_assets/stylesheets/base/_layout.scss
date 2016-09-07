@@ -18,7 +18,7 @@ header.header{
 .main-content{
   @include outer-container;
   @include media($mobile) {
-    padding: 0 40px;
+    padding: 0 20px;
   }
 }
 .card-box{
