@@ -86,7 +86,6 @@ $(document).ready(function() {
     scrollToTop();
   });
 
-
   //Botón de más información
   $.fn.toggleHTML = function(a, b) {
     return this.html(function(_, html) {

@@ -1,0 +1,79 @@
+header.header{
+  .header-content{
+    @include outer-container;
+  }
+  .logo{
+    @include span-columns(12);
+    @include omega();
+  }
+}
+.navigation-wrapper {
+  @include outer-container;
+}
+.hero{
+  .fixed-text, .sliding-text{
+    @include outer-container;
+  }
+}
+.main-content{
+  @include outer-container;
+  @include media($mobile) {
+    padding: 0 40px;
+  }
+}
+.card-box{
+  @include row();
+  @include span-columns(12);
+}
+.card-art{
+  @include span-columns(12 of 12);
+  @include media($mobile) {
+    @include omega();
+  }
+  @include media($desktop) {
+    @include span-columns(2 of 12);
+  }
+}
+.card-description{
+  @include span-columns(12 of 12);
+  @include media($mobile) {
+    @include omega();
+  }
+  @include media($desktop) {
+    @include span-columns(4 of 12);
+  }
+}
+.card-benefits{
+  @include span-columns(12 of 12);
+  @include media($mobile) {
+    //@include omega();
+  }
+  @include media($desktop) {
+    @include span-columns(4 of 12);
+  }
+}
+.card-options{
+  @include span-columns(12 of 12);
+  @include omega();
+  @include media($desktop) {
+    @include span-columns(2 of 12);
+    @include omega();
+  }
+}
+.mas-info-container{
+  @include span-columns(12 of 12);
+  @include omega();
+  .mas-info-general{
+    @include media($desktop) {
+      @include shift(2);
+      @include span-columns(4 of 12);
+    }
+  }
+  .mas-beneficios-container{
+    @include span-columns(12 of 12);
+    @include media($desktop) {
+      @include span-columns(12 of 12);
+      @include omega();
+    }
+  }
+}

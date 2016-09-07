@@ -6,9 +6,6 @@ header.header{
   min-height: 53px;
   min-width: 100%;
 
-  .header-content{
-    @include outer-container;
-  }
   h1{
     color: $blanco;
   }

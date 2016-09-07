@@ -22,9 +22,9 @@ markdown: kramdown
 
 assets:
   compress:
-    css: default
-    js: default
-  cache: default
+    css: false
+    js: false
+  cache: false
   cdn: https://cdn.example.com
   skip_baseurl_with_cdn: false
   skip_prefix_with_cdn: false
@@ -32,6 +32,6 @@ assets:
   assets:
     - "*.png"
     - "bundle.css"
-  digest: true
+  digest: false
   sources:
     - "_assets/folder"

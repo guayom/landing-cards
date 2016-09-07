@@ -1,9 +1,5 @@
-.main-content{
-  @include outer-container;
-  }
 .card-box{
   @include padding($main-spacing*1.7 null);
-  @include row();
   background: $blanco;
   color: #686868;
   font-weight: 400;
@@ -22,26 +18,21 @@
   }
 }
 .card-art{
-  @include span-columns(2);
   img{
     max-width: 100%;
   }
 }
 .card-description{
-  @include span-columns(4);
   h3{
     text-transform: uppercase;
   }
 }
 .card-benefits{
-  @include span-columns(4);
   h3{
     text-transform: uppercase;
   }
 }
 .card-options{
-  @include span-columns(2);
-  @include omega(5n);
   text-align: center;
   .button{
     width: 100%;
@@ -50,19 +41,10 @@
   }
 }
 .mas-info-container{
-  @include outer-container;
-  @include row();
   display: none;
 
   &.shown{
 
-  }
-  .mas-info-general{
-    @include span-columns(4);
-    @include shift(2);
-  }
-  .mas-beneficios-container{
-    @include span-columns(4);
   }
 }
 .disclaimer{
