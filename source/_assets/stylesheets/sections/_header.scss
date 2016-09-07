@@ -25,7 +25,6 @@ header.header{
       height: 40px;
       @include transition(all 0.5s);
       margin-left: 20px;
-      max-width: 80%;
     }
   }
   &.navigation-scrolled{
