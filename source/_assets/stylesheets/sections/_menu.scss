@@ -2,10 +2,11 @@ header.navigation {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
   $large-screen: 53.75em !default;
   $navigation-padding: 1em;
-  $navigation-background: $gris-oscuro;
-  $navigation-color: $blanco;
+  $navigation-background: $dark-gray;
+  $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
   $navigation-height: 60px;
   $navigation-nav-button-background: $action-color;
@@ -24,14 +25,12 @@ header.navigation {
   width: 100%;
   z-index: 999;
 
-  position: absolute;
-  top: 106px;
-
   .navigation-wrapper {
     @include clearfix;
     @include outer-container;
     position: relative;
     z-index: 9999;
+
   }
 
   .logo {
@@ -46,7 +45,8 @@ header.navigation {
     }
   }
 
-  // Mobile view
+
+// Mobile view
 
   .navigation-menu-button {
     color: $navigation-color;
@@ -57,7 +57,6 @@ header.navigation {
     padding-right: 1em;
     text-decoration: none;
     text-transform: uppercase;
-    cursor: pointer;
 
     @include media ($horizontal-bar-mode) {
       display: none;
@@ -65,12 +64,12 @@ header.navigation {
 
     &:focus,
     &:hover {
-      color: $navigation-background;
-      background: $navigation-color-hover;
+      color: $navigation-color-hover;
     }
   }
 
-  // Nav menu
+
+// Nav menu
 
   nav {
     float: none;
@@ -102,7 +101,8 @@ header.navigation {
     }
   }
 
-  // The nav items
+
+// The nav items
 
   ul li.nav-link {
     background: $navigation-background;
@@ -133,9 +133,7 @@ header.navigation {
 
       &:focus,
       &:hover {
-        //background: $navigation-color-hover;
-        //color: $navigation-background;
-        text-decoration: underline;
+        color: $navigation-color-hover;
       }
     }
   }
@@ -145,7 +143,8 @@ header.navigation {
     padding-bottom: 3px;
   }
 
-  // Sub menus
+
+// Sub menus
 
   li.more.nav-link {
     padding-right: 0;
@@ -274,7 +273,8 @@ header.navigation {
     }
   }
 
-  // Elements on the far right
+
+// Elements on the far right
 
   .navigation-tools {
     background: #505050;
@@ -289,7 +289,8 @@ header.navigation {
     }
   }
 
-  // Search bar
+
+// Search bar
 
   .search-bar {
     $search-bar-border-color: $base-border-color;
@@ -349,25 +350,5 @@ header.navigation {
         display: block;
       }
     }
-  }
-
-  .filter.active{
-    position: relative;
-  }
-  .filter.active:after{
-    $triangle-size: 2em;
-    content: " ";
-    position: absolute;
-    top:100%;
-    left: 50%;
-    margin-left: ($triangle-size/1.2*-1);
-    border-left: $triangle-size/1.5 solid transparent;
-    border-right: $triangle-size/1.5 solid transparent;
-    border-top: $navigation-background $triangle-size/2 solid;
-  }
-  &.navigation-scrolled{
-    position: fixed;
-    top: 53px;
-    //box-shadow: 2px 0px 5px #333;
   }
 }
