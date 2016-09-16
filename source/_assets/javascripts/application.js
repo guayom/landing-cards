@@ -55,7 +55,6 @@ function rotatorToHero(){
 
 $(document).ready(function() {
   rotatorToHero();
-  initAnimations();
 
   var menuToggle = $("#js-mobile-menu").unbind();
   $("#js-navigation-menu").removeClass("show");

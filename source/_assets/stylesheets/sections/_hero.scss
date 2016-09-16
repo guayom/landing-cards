@@ -5,18 +5,18 @@
   position: relative;
   color: $blanco;
 
-
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center 115px;
   background-size: 100%;
   z-index: 5;
 
   @include media($mobile) {
-    background-image: url(../images/iphonebg.jpg);
+    background-image: url(https://www.baccredomatic.com/sites/default/files/cr_landing_cards_iphonebg-min.jpg);
+    background-position: center top;
   }
   @include media($desktop) {
-    background-image: url(../images/hero.jpg);
+    background-image: url(https://www.baccredomatic.com/sites/default/files/cr_landing_tarjetas_custom-min_0.jpg);
+    background-position: center 115px;
   }
 
   &:after{

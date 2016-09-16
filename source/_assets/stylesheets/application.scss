@@ -1,4 +1,4 @@
-@import "font-awesome/font-awesome";
+//@import "font-awesome/font-awesome";
 @import "vendor/normalize";
 @import "vendor/simple_text_rotator";
 
@@ -6,6 +6,6 @@
 @import "base/grid-settings";
 @import "neat/neat";
 @import "base/base";
-@import "global";
 
 @import 'sections/sections';
+@import "global";

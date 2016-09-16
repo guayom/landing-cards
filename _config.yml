@@ -17,13 +17,15 @@ description: Entre tantas tarjetas ¿Cuál es la que mejor se adapta a sus neces
 # Name of project on Github
 baseurl:
 
+image_path: https://www.baccredomatic.com/sites/default/files/
+
 # Build settings
 markdown: kramdown
 
 assets:
   compress:
-    css: false
-    js: false
+    css: default
+    js: default
   cache: false
   cdn: https://cdn.example.com
   skip_baseurl_with_cdn: false
@@ -32,6 +34,6 @@ assets:
   assets:
     - "*.png"
     - "bundle.css"
-  digest: false
+  digest: default
   sources:
     - "_assets/folder"

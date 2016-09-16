@@ -1,4 +1,4 @@
-header.header{
+.header{
   .header-content{
     @include outer-container;
   }
@@ -72,7 +72,7 @@ header.header{
   .mas-beneficios-container{
     @include span-columns(12 of 12);
     @include media($desktop) {
-      @include span-columns(12 of 12);
+      @include span-columns(4 of 12);
       @include omega();
     }
   }

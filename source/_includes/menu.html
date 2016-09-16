@@ -1,4 +1,4 @@
-<header class="navigation" role="banner">
+<div class="navigation-tarjetas" role="banner">
   <div class="navigation-wrapper">
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">Slecciona una categoría</a>
     <nav role="navigation">
@@ -8,16 +8,6 @@
           <li class="nav-link"><a class="filter" data-filter=".{{categoria.slug}}" data-description="{{categoria.descripcion}}" data-titulo="{{categoria.titulo}}" href="javascript:void(0)">{{categoria.titulo}}</a></li>
         {% endfor %}
       </ul>
-    </nav><!--
-    <div class="navigation-tools">
-      <div class="search-bar">
-        <form role="search">
-          <input type="search" placeholder="Enter Search" />
-          <button type="submit">
-            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
-          </button>
-        </form>
-      </div>
-    </div>-->
+    </nav>
   </div>
-</header>
+</div>
