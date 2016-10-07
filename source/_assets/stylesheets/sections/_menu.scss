@@ -362,22 +362,19 @@
 .nav-icon{
     width: 33px;
     height: 34px;
-    margin: 0 auto;
     background-image: url(https://www.baccredomatic.com/sites/default/files/cr_landing_tarjetas_icons.png);
     background-position: -4px -13px;
-    margin-top: 20px;
-
-    @include media($desktop) {
-      float: none;
-    }
-
     @include media($mobile) {
       float: left;
       margin-top: 5px;
       margin-right: 10px;
       line-height: 50px;
     }
-
+    @include media($desktop) {
+      float: none;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
     &.cashback{
       background-position: -172px -13px;
     }
@@ -407,10 +404,10 @@
   line-height: 95px;
   margin-right: 40px;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-}
-
-@include media($mobile) {
-  .nav-text{
+  @include media($mobile) {
     display: none;
+  }
+  @include media($desktop) {
+    display: block;
   }
 }
