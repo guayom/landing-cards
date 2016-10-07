@@ -7,10 +7,15 @@
   border-bottom: 1px solid $gris-medio;
 
   h2{
-    font-size: 24px;
     line-height: 33px;
     font-weight: 400;
     margin-bottom: 30px;
+    @include media($mobile) {
+      font-size: 19px;
+    }
+    @include media($desktop) {
+      font-size: 24px;
+    }
   }
 
   &:last-child{
@@ -21,6 +26,12 @@
   margin-bottom: 20px;
   img{
     max-width: 100%;
+  }
+  @include media($mobile) {
+    text-align: center;
+  }
+  @include media($desktop) {
+    text-align: left;
   }
 }
 .card-description, .card-benefits, .card-rates{
