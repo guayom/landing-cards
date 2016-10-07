@@ -70,3 +70,42 @@
     margin-bottom: 0px;
   }
 }
+$icon-height: 43px;
+.category-identifier{
+    width: 34px;
+    height: 36px;
+    background-image: url(https://www.baccredomatic.com/sites/default/files/cr_landing_tarjetas_icons.png);
+    background-position: -4px $icon-height;
+    @include media($mobile) {
+    }
+    @include media($desktop) {
+    }
+    &.cashback{
+      background-position: -172px $icon-height;
+    }
+
+    &.viajes{
+      background-position: -60px $icon-height;
+    }
+    &.puntos{
+      background-position: -116px $icon-height;
+    }
+    &.supermercados{
+      background-position: -283px $icon-height;
+    }
+    &.otros{
+      background-position: -228px $icon-height;
+      width: 35px;
+    }
+    &.todas{
+      background-position: -4px $icon-height;
+    }
+}
+h2{
+  .category-identifier{
+    display: inline-block;
+    float: none;
+    margin-bottom: -10px;
+    margin-left: 10px;
+  }
+}

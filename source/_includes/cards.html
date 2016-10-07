@@ -3,7 +3,7 @@
 <div id="cards-container" class="cards-containter">
   {% for tarjeta in tarjetas %}
     <div class="card-box mix {{ tarjeta.categoria.slug }}">
-      <h2>{{ tarjeta.nombre }}</h2>
+      <h2>{{ tarjeta.nombre }}<div class="category-identifier {{tarjeta.categoria.slug}}"></div></h2>
       <div class="card-art">
         <!-- <img src="{{site.image_path}}{{site.data.images[tarjeta.slug]}}"> -->
         <a href="{{tarjeta.pagina}}">
