@@ -7,7 +7,8 @@
       <div class="card-art">
         <!-- <img src="{{site.image_path}}{{site.data.images[tarjeta.slug]}}"> -->
         <a href="{{tarjeta.pagina}}">
-          <img src="https://www.credomatic.com/content/es-cr/mailing/com/is16/tarjetas/{{tarjeta.imagenes.imagen.url}}" />
+          {% assign imagen_url_segments = tarjeta.imagenes.imagen.url | split: '/' %}
+          <img src="https://www.credomatic.com/content/es-cr/mailing/com/is16/tarjetas/{{imagen_url_segments.last}}" />
         </a>
       </div>
       <div class="card-description">
