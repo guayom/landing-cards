@@ -53,6 +53,13 @@
           }
         });
       });
+
+      var windowWidth = $(window).width();
+      if(windowWidth <= 414){
+        $('.filter').on("click", function(e){
+          menuToggle.trigger( "click" );
+        });
+      }
     });
 
     function scrollToTop() {
@@ -60,26 +67,8 @@
       return false;
     };
 
-
-    $(document).ready(function() {
-
-      var menuToggle = $("#js-mobile-menu").unbind();
-      $("#js-navigation-menu").removeClass("show");
-
-      menuToggle.on("click", function(e) {
-        e.preventDefault();
-        $("#js-navigation-menu").slideToggle(function(){
-          if($("#js-navigation-menu").is(":hidden")) {
-            $("#js-navigation-menu").removeAttr("style");
-          }
-        });
-      });
-
-    });
-
-
     //Sticky nav
-    var  mn = $(".navigation-tarjetas");
+    var mn = $(".navigation-tarjetas");
     var header = $(".header");
         mns = "navigation-scrolled";
         hdr = $('.header').height();
