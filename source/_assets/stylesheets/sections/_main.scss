@@ -61,3 +61,12 @@
 .mas-info{
   text-align: center;
 }
+
+.card-rates{
+  @include media($mobile) {
+    margin-bottom: 30px;
+  }
+  @include media($desktop) {
+    margin-bottom: 0px;
+  }
+}
