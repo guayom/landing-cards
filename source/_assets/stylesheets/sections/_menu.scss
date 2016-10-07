@@ -367,7 +367,13 @@
     background-position: -4px -13px;
     margin-top: 20px;
 
+    @include media($desktop) {
+      float: none;
+    }
 
+    @include media($mobile) {
+      float: left;
+    }
 
     &.cashback{
       background-position: -172px -13px;
@@ -401,9 +407,6 @@
 }
 
 @include media($mobile) {
-  .nav-icon{
-    float: left;
-  }
   .nav-text{
     display: none;
   }
