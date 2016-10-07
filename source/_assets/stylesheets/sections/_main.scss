@@ -12,6 +12,7 @@
     margin-bottom: 30px;
     @include media($mobile) {
       font-size: 19px;
+      text-align: center;
     }
     @include media($desktop) {
       font-size: 24px;
