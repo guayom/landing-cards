@@ -23,14 +23,17 @@
     max-width: 100%;
   }
 }
-.card-description{
+.card-description, .card-benefits, .card-rates{
   h3{
     text-transform: uppercase;
+    font-weight: bold;
+    color: $base-font-color;
   }
 }
 .card-benefits{
-  h3{
-    text-transform: uppercase;
+  ul{
+    list-style: disc;
+    padding-left: 17px;
   }
 }
 .card-options{

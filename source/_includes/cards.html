@@ -1,29 +1,40 @@
-{% assign cantidadDeBeneficios = 4 %}
+{% assign cantidadDeBeneficios = 2 %}
+{% assign tarjetas = site.data.contentful.spaces.tarjetas.tarjetas | sort:"order" %}
 <div id="cards-container" class="cards-containter">
-  {% for tarjeta in site.data.contentful.spaces.tarjetas.tarjetas %}
+  {% for tarjeta in tarjetas %}
     <div class="card-box mix {{ tarjeta.categoria.slug }}">
       <h2>{{ tarjeta.nombre }}</h2>
       <div class="card-art">
-        <img src="{{site.image_path}}{{site.data.images[tarjeta.slug]}}">
+        <!-- <img src="{{site.image_path}}{{site.data.images[tarjeta.slug]}}"> -->
+        <a href="{{tarjeta.pagina}}">
+          <img src="{{tarjeta.imagenes.imagen.url}}?w=263" />
+        </a>
       </div>
       <div class="card-description">
         <h3>En breve</h3>
-        <p>{{tarjeta.breveDescripcion | markdownify }}</p>
+        <p>{{tarjeta.oneliner | markdownify}}</p>
       </div>
       <div class="card-benefits">
         <h3>Beneficios</h3>
         <ul>
           {% for beneficio in tarjeta.beneficios limit:cantidadDeBeneficios %}
-            <li>{{beneficio.titulo}}</li>
+            <li>{{beneficio.titulo | markdownify}}</li>
           {% endfor %}
         </ul>
-        {% if tarjeta.disclaimers != blank %}
-          <p class="disclaimer">{{tarjeta.disclaimers}}</p>
-        {% endif %}
+      </div>
+      <div class="card-rates">
+        <h3>Tarifas</h3>
+        <ul>
+          {% if tarjeta.cargoAdministrativo %}
+            Costo administrativo: {{tarjeta.cargoAdministrativo}}
+          {% else %}
+            Sin costo adminsitrativo
+          {% endif %}
+        </ul>
       </div>
       <div class="card-options">
         <a href="{{tarjeta.form}}" class="button">Solicitar</a>
-        <a href="javascript:void(0)" class="mas-info" data-target="mas-info-{{forloop.index}}">Conozca más</a>
+        <a href="{{tarjeta.pagina}}">Conozca más</a>
       </div>
     </div>
   {% endfor %}

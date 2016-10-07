@@ -1,11 +1,24 @@
 <div class="navigation-tarjetas" role="banner">
   <div class="navigation-wrapper">
-    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">Slecciona una categoría</a>
+    <div class="nav-text">
+      ¿Qué tipo de tarjeta estás buscando?
+    </div>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">¿Qué tipo de tarjeta estás buscando?</a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
-        <li class="nav-link"><a  href="javascript:void(0)" class="filter" data-description="Beneficios aquí" data-titulo="¿Por qué una tarjeta Credomatic?" data-filter="all">Todas</a></li>
+        <li class="nav-link">
+            <a  href="javascript:void(0)" class="filter" data-description="Beneficios aquí" data-titulo="¿Por qué una tarjeta Credomatic?" data-filter="all">
+            <div class="nav-icon todas"></div>
+            Todas
+          </a>
+        </li>
         {% for categoria in site.data.categorias %}
-          <li class="nav-link"><a class="filter" data-filter=".{{categoria.slug}}" data-description="{{categoria.descripcion}}" data-titulo="{{categoria.titulo}}" href="javascript:void(0)">{{categoria.titulo}}</a></li>
+          <li class="nav-link">
+            <a class="filter" data-filter=".{{categoria.slug}}" data-description="{{categoria.descripcion}}" data-titulo="{{categoria.titulo}}" href="javascript:void(0)">
+              <div class="nav-icon {{categoria.slug}}"></div>
+              {{categoria.titulo}}
+            </a>
+          </li>
         {% endfor %}
       </ul>
     </nav>

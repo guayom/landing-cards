@@ -15,7 +15,6 @@
   <body>
     {% include header.html %}
     {% include menu.html %}
-    {% include hero.html %}
     <div class="main-content">
       {{ content }}
     </div>
@@ -61,25 +60,8 @@
       return false;
     };
 
-    //show rotator text in hero
-    function rotatorToHero(){
-      var targetDiv = $( ".sliding-text" );
-      var originalDiv = $( ".rotatorText" ).find('span');
-      $(targetDiv).empty();
-      $( originalDiv ).clone().appendTo(targetDiv);
-      var newDiv = $( ".sliding-text > span" );
-      $(newDiv).addClass("rotate");
-
-      //Simple text rotator
-      $(".rotate").textrotator({
-        animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-        separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-        speed: 6000 // How many milliseconds until the next word show.
-      });
-    }
 
     $(document).ready(function() {
-      rotatorToHero();
 
       var menuToggle = $("#js-mobile-menu").unbind();
       $("#js-navigation-menu").removeClass("show");
@@ -93,35 +75,6 @@
         });
       });
 
-      //Change hero text
-      $('.filter').click(function(){
-        var newText = $(this).data('titulo');
-        var newDescription = $(this).data('description');
-        var filter = $(this).data('filter');
-
-        if(filter == 'all'){
-          $('.fixed-text').html(newText);
-          rotatorToHero()
-        }else{
-          $('.fixed-text').html(newText);
-          $('.sliding-text').html(newDescription);
-        }
-
-        scrollToTop();
-      });
-
-      //Botón de más información
-      $.fn.toggleHTML = function(a, b) {
-        return this.html(function(_, html) {
-            return $.trim(html) === a ? b : a;
-        });
-      }
-      $('.mas-info').click(function(){
-        var targetDiv = $(this).data('target');
-        $('.'+targetDiv).slideToggle();
-        $(this).toggleHTML('Ocultar', 'Conozca más');
-      });
-      $('p').each(function() { var $this = $(this);if($this.html().replace(/\s|&nbsp;/g, '').length == 0) $this.remove();});
     });
 
 
