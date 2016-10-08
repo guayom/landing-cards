@@ -53,7 +53,7 @@
     float: left;
     line-height: $navigation-height;
     margin: 0;
-    padding-left: 1em;
+    //padding-left: 1em;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -108,7 +108,7 @@
     display: block;
     line-height: $navigation-height;
     overflow: hidden;
-    padding-left: 1em;
+    padding: 1em;
     text-align: left;
     width: 100%;
     z-index: 9999;
@@ -128,7 +128,7 @@
       font-weight: 700;
 
       @include media ($horizontal-bar-mode) {
-        padding-right: 1em;
+        //padding-right: 1em;
       }
 
       &:focus,
@@ -350,6 +350,20 @@
         display: block;
       }
     }
+  }
+
+  .filter.active{
+      position: relative;
+  }
+  .filter.active:after{
+      content: " ";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-top: 14px solid $navigation-background;
+      margin-left: -14px;
   }
 }
 .navigation-scrolled{

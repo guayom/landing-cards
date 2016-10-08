@@ -10,13 +10,17 @@
     line-height: 33px;
     font-weight: 400;
     margin-bottom: 30px;
+    font-weight: bold;
     @include media($mobile) {
       font-size: 19px;
       text-align: center;
+      font-weight: bold;
     }
     @include media($desktop) {
       font-size: 24px;
       text-align: center;
+      margin-bottom: 40px;
+      font-weight: bold;
     }
   }
 
