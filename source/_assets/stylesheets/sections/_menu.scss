@@ -373,6 +373,15 @@
     position: fixed;
     top: 53px;
   }
+  .logo{
+    @include media($mobile) {
+      margin-top: 0;
+      padding: 0;
+      img{
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .nav-icon{
