@@ -4,10 +4,14 @@
   }
   .logo{
     @include media($mobile) {
-      @include span-columns(12);
+      @include span-columns(12 of 12);
+      @include omega();
+      img{
+        max-width: 100%;
+      }
     }
     @include media($desktop) {
-      @include span-columns(6);
+      @include span-columns(6 of 12);
     }
   }
 }

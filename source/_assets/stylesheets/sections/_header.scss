@@ -22,13 +22,12 @@
     img{
       @include transition(all 0.5s);
       margin-left: 20px;
+      max-width: 100%;
       @include media($mobile) {
         height: auto;
-        max-width: 100%;
       }
       @include media($desktop) {
         height: 40px;
-        max-width: 100%;
         width: auto;
       }
     }
