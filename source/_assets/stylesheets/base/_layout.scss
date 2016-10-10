@@ -26,6 +26,11 @@
     display: block;
   }
 }
+.navigation-scrolled{
+  .legals-section{
+    display: none;
+  }
+}
 .navigation-wrapper {
   @include outer-container;
 }

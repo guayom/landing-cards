@@ -23,7 +23,7 @@
       @include padding(0);
     }
     @include media($desktop) {
-      @include padding(30px 0);
+      //@include padding(30px 0);
     }
     img{
       @include transition(all 0.5s);
@@ -34,7 +34,7 @@
       @include media($desktop) {
         height: 40px;
         width: auto;
-        margin-left: 20px;
+        margin-top: 30px;
       }
     }
   }
@@ -45,7 +45,7 @@
     .logo{
       @include padding(12px 0);
       img{
-        //height: 30px;
+        height: 30px;
         width: auto;
       }
     }
@@ -57,11 +57,10 @@
   margin-right: 20px;
   li{
     display: inline-block;
-    line-height: 40px;
     margin-right: 10px;
     a{
       color: $gris_oscuro;
-      line-height: 80px;
+      line-height: 100px;
     }
   }
 }

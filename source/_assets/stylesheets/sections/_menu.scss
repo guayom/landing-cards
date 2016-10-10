@@ -20,7 +20,7 @@
   $horizontal-bar-mode: $large-screen;
 
   background-color: $navigation-background;
-  border-bottom: 1px solid darken($navigation-background, 10);
+  //border-bottom: 1px solid darken($navigation-background, 10);
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
@@ -29,7 +29,7 @@
     @include clearfix;
     position: relative;
     z-index: 9999;
-
+    //line-height: 1em;
   }
 
   .logo {
@@ -96,7 +96,7 @@
     }
 
     @include media ($horizontal-bar-mode) {
-      display: inline;
+      display: inline-block;
       margin: 0;
       padding: 0;
     }
@@ -107,18 +107,17 @@
 
   ul li.nav-link {
     background: $navigation-background;
-    display: block;
-    line-height: $navigation-height;
-    overflow: hidden;
-    padding: 1em;
+    display: inline-block;
+    //line-height: $navigation-height;
+    //overflow: hidden;
     text-align: left;
     width: 100%;
     z-index: 9999;
 
     @include media ($horizontal-bar-mode) {
       background: transparent;
-      display: inline;
-      line-height: $navigation-height;
+      display: inline-block;
+      //line-height: $navigation-height;
       text-decoration: none;
       width: auto;
     }
@@ -128,6 +127,7 @@
       display: inline-block;
       text-decoration: none;
       font-weight: 700;
+      padding: 20px 1em;
 
       @include media ($horizontal-bar-mode) {
         //padding-right: 1em;
@@ -356,16 +356,29 @@
 
   .filter.active{
       position: relative;
-  }
-  .filter.active:after{
-      content: " ";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      border-left: 14px solid transparent;
-      border-right: 14px solid transparent;
-      border-top: 14px solid $navigation-background;
-      margin-left: -14px;
+      background: lighten($navigation-background, 10%);
+      @include media($mobile) {
+        display: block;
+      }
+      @include media($desktop) {
+        display: inline-block;
+      }
+      &.active:after{
+          content: " ";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          border-left: 14px solid transparent;
+          border-right: 14px solid transparent;
+          border-top: 14px solid lighten($navigation-background, 10%);
+          margin-left: -14px;
+          @include media($mobile) {
+            display: none;
+          }
+          @include media($desktop) {
+            display: block;
+          }
+      }
   }
 }
 .navigation-scrolled{
@@ -391,14 +404,12 @@
     background-position: -4px -13px;
     @include media($mobile) {
       float: left;
-      margin-top: 5px;
       margin-right: 10px;
       line-height: 50px;
     }
     @include media($desktop) {
       float: none;
       margin: 0 auto;
-      margin-top: 20px;
     }
     &.cashback{
       background-position: -173px -13px;
