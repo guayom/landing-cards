@@ -447,4 +447,7 @@
   @include media($desktop) {
     display: block;
   }
+  p{
+    margin: 0;
+  }
 }
