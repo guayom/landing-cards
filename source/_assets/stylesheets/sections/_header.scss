@@ -45,6 +45,9 @@
     .logo{
       @include padding(12px 0);
       img{
+        @include media($desktop) {
+          height: 30px;
+        }
         width: auto;
       }
     }
