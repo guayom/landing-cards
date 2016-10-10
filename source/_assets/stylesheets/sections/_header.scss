@@ -47,3 +47,17 @@
     }
   }
 }
+
+.legals-section{
+  text-align: right;
+  margin-right: 20px;
+  li{
+    display: inline-block;
+    line-height: 40px;
+    margin-right: 10px;
+    a{
+      color: $gris_oscuro;
+      line-height: 80px;
+    }
+  }
+}

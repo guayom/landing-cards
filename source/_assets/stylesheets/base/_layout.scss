@@ -1,11 +1,15 @@
 .header{
   .header-content{
     @include outer-container;
+    @include span-columns(6);
   }
   .logo{
     @include span-columns(12);
-    @include omega();
   }
+}
+.legals-section{
+  @include span-columns(6);
+  @include omega();
 }
 .navigation-wrapper {
   @include outer-container;
