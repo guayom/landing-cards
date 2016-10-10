@@ -58,6 +58,7 @@
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
+    font-size: 0.95em;
 
     @include media ($horizontal-bar-mode) {
       display: none;
