@@ -53,9 +53,11 @@
     float: left;
     line-height: $navigation-height;
     margin: 0;
+    width: 100%;
     //padding-left: 1em;
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
 
     @include media ($horizontal-bar-mode) {
       display: none;
