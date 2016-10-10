@@ -1,15 +1,24 @@
 .header{
   .header-content{
     @include outer-container;
-    @include span-columns(6);
   }
   .logo{
-    @include span-columns(12);
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+    @include media($desktop) {
+      @include span-columns(6);
+    }
   }
 }
 .legals-section{
-  @include span-columns(6);
+  @include span-columns(12);
   @include omega();
+  display: none;
+  @include media($desktop) {
+    @include span-columns(6);
+    display: block;
+  }
 }
 .navigation-wrapper {
   @include outer-container;

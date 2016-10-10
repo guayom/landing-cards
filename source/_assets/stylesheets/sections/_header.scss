@@ -18,18 +18,17 @@
     color: $blanco;
   }
   .logo{
-    @include span-columns(12);
-    @include omega();
     @include padding(30px 0);
     img{
       @include transition(all 0.5s);
       margin-left: 20px;
       @include media($mobile) {
-        width: 90%;
         height: auto;
+        max-width: 100%;
       }
       @include media($desktop) {
         height: 40px;
+        max-width: 100%;
         width: auto;
       }
     }
