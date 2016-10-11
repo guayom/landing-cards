@@ -439,7 +439,7 @@
     display: none;
   }
   @include media($desktop) {
-    display: block;
+    display: inline-block;
   }
   p{
     margin: 0;
@@ -452,5 +452,16 @@
     font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     margin: 0; margin-right: 40px;
     line-height: 98px;
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+    &.clearfix {
+      zoom: 1; /* ie 6/7 */
+    }
   }
 }
