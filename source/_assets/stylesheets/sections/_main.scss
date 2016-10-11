@@ -11,6 +11,7 @@
     font-weight: 400;
     margin-bottom: 30px;
     font-weight: bold;
+    color: $gris_oscuro;
     @include media($mobile) {
       font-size: 19px;
       text-align: center;
@@ -133,4 +134,11 @@ h2{
   div, h2{
     display: inline-block;
   }
+}
+.btn-border{
+  border: solid 1px;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  display: inline-block;
 }
