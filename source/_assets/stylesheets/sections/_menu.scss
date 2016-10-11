@@ -435,12 +435,6 @@
 }
 
 .nav-text{
-  float: left;
-  color: #fff;
-  font-size: 1.5em;
-  line-height: 95px;
-  margin-right: 40px;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   @include media($mobile) {
     display: none;
   }
@@ -449,5 +443,14 @@
   }
   p{
     margin: 0;
+  }
+  h1{
+    float: left;
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 95px;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    margin: 0; margin-right: 40px;
+    line-height: 98px;
   }
 }
